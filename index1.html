@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Manoj | BTech CSE Portfolio</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    scroll-behavior: smooth;
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h2 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #0f172a;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(56,189,248,0.3);
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+    padding: 80px 10%;
+}
+
+section h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+/* ---------- ABOUT ---------- */
+.about p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 800px;
+    color: #d1d5db;
+}
+
+/* ---------- SKILLS ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+}
+
+.skill-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ---------- PROJECTS ---------- */
+.project-card {
+    background: #020617;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    transition: transform 0.4s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-card h4 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #020617;
+    color: #9ca3af;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- SCROLL ANIMATION ---------- */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+    .hero h2 {
+        font-size: 34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Rohan Manoj</h1>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Hello, I'm <span>Rohan Manoj</span></h2>
+        <p>
+            BTech Computer Science Engineering student with a passion for
+            building clean, efficient, and user-centric software solutions.
+        </p>
+        <button onclick="scrollToSection()">Explore Portfolio</button>
+    </div>
+</section>
+
+<section id="about" class="about hidden">
+    <h3>About Me</h3>
+    <p>
+        I am a BTech Computer Science Engineering student who enjoys
+        problem-solving, learning modern technologies, and creating
+        intuitive digital experiences. I believe in writing clean code
+        and continuously improving my technical and analytical skills.
+    </p>
+</section>
+
+<section id="skills" class="hidden">
+    <h3>Skills</h3>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h4>Programming</h4>
+            <p>C, Python, Java (Basics)</p>
+        </div>
+        <div class="skill-card">
+            <h4>Web Development</h4>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
+        <div class="skill-card">
+            <h4>Database</h4>
+            <p>MySQL</p>
+        </div>
+        <div class="skill-card">
+            <h4>Concepts</h4>
+            <p>DSA, OOP, DBMS</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="hidden">
+    <h3>Projects</h3>
+
+    <div class="project-card">
+        <h4>Student Portfolio Website</h4>
+        <p>
+            A responsive and animated personal portfolio built using
+            HTML, CSS, and JavaScript with focus on UI/UX.
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h4>Academic Mini Projects</h4>
+        <p>
+            Implemented core programming and database concepts through
+            coursework-based projects.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Rohan Manoj • BTech CSE
+</footer>
+
+<script>
+/* Smooth scroll button */
+function scrollToSection() {
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+}
+
+/* Scroll reveal animation */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
